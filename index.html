@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #0002;
+        }
+
+        h1 {
+            color: #2563eb;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Xin chào!</h1>
+        <p>Đây là trang web HTML demo đầu tiên của bạn.</p>
+
+        <input type="text" id="name" placeholder="Nhập tên của bạn">
+
+        <br><br>
+
+        <button onclick="sayHello()">Nhấn vào đây</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function sayHello() {
+            const name = document.getElementById("name").value;
+
+            if (name.trim() === "") {
+                document.getElementById("result").innerText =
+                    "Vui lòng nhập tên!";
+            } else {
+                document.getElementById("result").innerText =
+                    "Xin chào " + name + "!";
+            }
+        }
+    </script>
+</body>
+</html>
